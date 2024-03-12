@@ -1,0 +1,1246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WebApplication1</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44352</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebForms_Basic.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebForms_Basic.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.4.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.Routing" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Controller\AcdAttendanceController.cs" />
+    <Content Include="Controller\AcdAttendanceModel.cs" />
+    <Content Include="Controller\AcdDepartmentController.cs" />
+    <Content Include="Controller\acd_module_outline.cs" />
+    <Content Include="Controller\ACPC.cs" />
+    <Content Include="Controller\AdmissionCancellationController.cs" />
+    <Content Include="Controller\AllotmentMaster.cs" />
+    <Content Include="Controller\AnswerSheet.cs" />
+    <Content Include="Controller\AnswerSheetController.cs" />
+    <Content Include="Controller\AppAlertConfig.cs" />
+    <Content Include="Controller\AppAlertConfigController.cs" />
+    <Content Include="Controller\applicationReceivedController.cs" />
+    <Content Include="Controller\Attendance.cs" />
+    <Content Include="Controller\Batch.cs" />
+    <Content Include="Controller\BatchController.cs" />
+    <Content Include="Controller\Branch.cs" />
+    <Content Include="Controller\BranchController.cs" />
+    <Content Include="Controller\CertificateMaster.cs" />
+    <Content Include="Controller\CertificateMasterController.cs" />
+    <Content Include="Controller\College.cs" />
+    <Content Include="Controller\CollegeController.cs" />
+    <Content Include="Controller\CommunicationTrController.cs" />
+    <Content Include="Controller\CommunicationTrEntity.cs" />
+    <Content Include="Controller\Config.cs" />
+    <Content Include="Controller\ConfigController.cs" />
+    <Content Include="Controller\Course.cs" />
+    <Content Include="Controller\CourseController.cs" />
+    <Content Include="Controller\CourseLink.cs" />
+    <Content Include="Controller\CourseLinkController.cs" />
+    <Content Include="Controller\CourseTeacherAllotController.cs" />
+    <Content Include="Controller\DefineCreditLimit.cs" />
+    <Content Include="Controller\DefineTotalCreditController.cs" />
+    <Content Include="Controller\DegreeComplition.cs" />
+    <Content Include="Controller\DemandCancelController.cs" />
+    <Content Include="Controller\Department.cs" />
+    <Content Include="Controller\DocumentAcad.cs" />
+    <Content Include="Controller\DocumentController.cs" />
+    <Content Include="Controller\DocumentControllerAcad.cs" />
+    <Content Include="Controller\EntityClass.cs" />
+    <Content Include="Controller\EntityMethodClass.cs" />
+    <Content Include="Controller\ExamScheduling.cs" />
+    <Content Include="Controller\FetchDataController.cs" />
+    <Content Include="Controller\Grade.cs" />
+    <Content Include="Controller\GradeController.cs" />
+    <Content Include="Controller\GradeEntry.cs" />
+    <Content Include="Controller\GradeEntryController.cs" />
+    <Content Include="Controller\Installment.cs" />
+    <Content Include="Controller\InstallmentController.cs" />
+    <Content Include="Controller\IntakeLeadMapping.cs" />
+    <Content Include="Controller\IntakeLeadMappingController.cs" />
+    <Content Include="Controller\LeavingCertificate.cs" />
+    <Content Include="Controller\LeavingCertificateController.cs" />
+    <Content Include="Controller\LMController.cs" />
+    <Content Include="Controller\MarkEntry.cs" />
+    <Content Include="Controller\MarksEntryController.cs" />
+    <Content Include="Controller\MarksheetInventoryRptController.cs" />
+    <Content Include="Controller\ModuleOutline_Controller.cs" />
+    <Content Include="Controller\ModuleRuleBook.cs" />
+    <Content Include="Controller\NCCActivity.cs" />
+    <Content Include="Controller\NCCActivityController.cs" />
+    <Content Include="Controller\New_Student.cs" />
+    <Content Include="Controller\New_Student_RegController.cs" />
+    <Content Include="Controller\Notification.cs" />
+    <Content Include="Controller\NotificationAndroid.cs" />
+    <Content Include="Controller\NotificationController.cs" />
+    <Content Include="Controller\PBIConfigurationController.cs" />
+    <Content Include="Controller\PBIConfigurationEntity.cs" />
+    <Content Include="Controller\PhdController.cs" />
+    <Content Include="Controller\PhdPostAdmission.cs" />
+    <Content Include="Controller\Projects.cs" />
+    <Content Include="Controller\ProjectsController.cs" />
+    <Content Include="Controller\PStaff.cs" />
+    <Content Include="Controller\PStaffController.cs" />
+    <Content Include="Controller\QrCodeController.cs" />
+    <Content Include="Controller\QualifiedExam.cs" />
+    <Content Include="Controller\QualifyController.cs" />
+    <Content Include="Controller\ReportTypeController.cs" />
+    <Content Include="Controller\ReportTypeEntity.cs" />
+    <Content Include="Controller\RoomConfig.cs" />
+    <Content Include="Controller\Scheme.cs" />
+    <Content Include="Controller\SchemeController.cs" />
+    <Content Include="Controller\Scholarship.cs" />
+    <Content Include="Controller\Seating.cs" />
+    <Content Include="Controller\SendThrough.cs" />
+    <Content Include="Controller\SendThroughController.cs" />
+    <Content Include="Controller\Session.cs" />
+    <Content Include="Controller\SessionController.cs" />
+    <Content Include="Controller\SlotController.cs" />
+    <Content Include="Controller\SlotMaster.cs" />
+    <Content Include="Controller\SpecialClassApproveController.cs" />
+    <Content Include="Controller\SpecialRequestConfigController.cs" />
+    <Content Include="Controller\SpecialRequestConfiguration.cs" />
+    <Content Include="Controller\Student.cs" />
+    <Content Include="Controller\StudentAddress.cs" />
+    <Content Include="Controller\StudentAttendance.cs" />
+    <Content Include="Controller\StudentAttendanceController.cs" />
+    <Content Include="Controller\StudentController.cs" />
+    <Content Include="Controller\StudentDetend.cs" />
+    <Content Include="Controller\StudentDetentionController.cs" />
+    <Content Include="Controller\StudentFeedBack.cs" />
+    <Content Include="Controller\StudentFeedBackController.cs" />
+    <Content Include="Controller\StudentInformation.cs" />
+    <Content Include="Controller\StudentPhoto.cs" />
+    <Content Include="Controller\StudentProfile.cs" />
+    <Content Include="Controller\StudentProfileController.cs" />
+    <Content Include="Controller\StudentProgression.cs" />
+    <Content Include="Controller\StudentProgressionController.cs" />
+    <Content Include="Controller\StudentQualExm.cs" />
+    <Content Include="Controller\StudentRegist.cs" />
+    <Content Include="Controller\StudentRegistration.cs" />
+    <Content Include="Controller\StudentRegistrationController.cs" />
+    <Content Include="Controller\StudentRegistrationModel.cs" />
+    <Content Include="Controller\StudentRequestController.cs" />
+    <Content Include="Controller\StudentSearch.cs" />
+    <Content Include="Controller\StudentSelectFieldController.cs" />
+    <Content Include="Controller\Student_Acd.cs" />
+    <Content Include="Controller\TabController.cs" />
+    <Content Include="Controller\TabEntity.cs" />
+    <Content Include="Controller\TeachingPlanController.cs" />
+    <Content Include="Controller\WalletController.cs" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Js\Assessment_Component.js" />
+    <Content Include="Js\Exam_Component_Weightage.js" />
+    <Content Include="Js\Exam_Pattern.js" />
+    <Content Include="Js\FinalGradeRelease.js" />
+    <Content Include="Js\GradeApprovalDean.js" />
+    <Content Include="Js\GradeApprovalProgramHead.js" />
+    <Content Include="Js\GradeApprovalUnreleaseDean.js" />
+    <Content Include="Js\GradeCard.js" />
+    <Content Include="Js\GradeCorrection.js" />
+    <Content Include="Js\GradeEncodingPeriod.js" />
+    <Content Include="Js\GradeEncodingPeriodExtension.js" />
+    <Content Include="Js\INC_Approval.js" />
+    <Content Include="Js\INC_CompletionPeriod.js" />
+    <Content Include="Js\INC_Completion_Apply.js" />
+    <Content Include="Js\INC_DEAN_Approval.js" />
+    <Content Include="Js\MarkEntry.js" />
+    <Content Include="Js\Subject_Transmutation_Tagging.js" />
+    <Content Include="Js\TaggingProgramHeadDean.js" />
+    <Content Include="Js\UnreleaseFinalGradeRelease.js" />
+    <Content Include="Js\USATransmutation_Table.js" />
+    <Content Include="Js\xlsx_0.17.3_xlsx.full.min.js" />
+    <Content Include="pages\AcademicRoomMapping.aspx" />
+    <Content Include="pages\AcademicRoomMapping.aspx.cs" />
+    <Content Include="pages\AcademicStaff.aspx" />
+    <Content Include="pages\AcademicStaff.aspx.cs" />
+    <Content Include="pages\Academic_Awards.aspx" />
+    <Content Include="pages\Academic_Awards.aspx.cs" />
+    <Content Include="pages\Academic_SummeryReport.aspx" />
+    <Content Include="pages\Academic_SummeryReport.aspx.cs" />
+    <Content Include="pages\AcdAttendanceController.cs" />
+    <Content Include="pages\AcdAttendanceModel.cs" />
+    <Content Include="pages\AcdDepartmentController.cs" />
+    <Content Include="pages\acd_module_outline.cs" />
+    <Content Include="pages\Acd_Update_Photo_Student.aspx" />
+    <Content Include="pages\Acd_Update_Photo_Student.aspx.cs" />
+    <Content Include="pages\ACPC.cs" />
+    <Content Include="pages\ActivityCampDetails.aspx" />
+    <Content Include="pages\ActivityCampDetails.aspx.cs" />
+    <Content Include="pages\Activity_type_reports.aspx" />
+    <Content Include="pages\Activity_type_reports.aspx.cs" />
+    <Content Include="pages\AddressDetails.aspx" />
+    <Content Include="pages\AddressDetails.aspx.cs" />
+    <Content Include="pages\Add_Campaign.aspx" />
+    <Content Include="pages\Add_Campaign.aspx.cs" />
+    <Content Include="pages\AdmExamCancellation.aspx" />
+    <Content Include="pages\AdmExamCancellation.aspx.cs" />
+    <Content Include="pages\AdminMultipleLogin.aspx" />
+    <Content Include="pages\AdminMultipleLogin.aspx.cs" />
+    <Content Include="pages\AdmissionApprovalByAdmin.aspx" />
+    <Content Include="pages\AdmissionApprovalByAdmin.aspx.cs" />
+    <Content Include="pages\AdmissionCancellation.aspx" />
+    <Content Include="pages\AdmissionCancellation.aspx.cs" />
+    <Content Include="pages\AdmissionCancellationController.cs" />
+    <Content Include="pages\AdmissionConfirmationReport.aspx" />
+    <Content Include="pages\AdmissionConfirmationReport.aspx.cs" />
+    <Content Include="pages\AdmissionDetails.aspx" />
+    <Content Include="pages\AdmissionDetails.aspx.cs" />
+    <Content Include="pages\admissionprocess.aspx" />
+    <Content Include="pages\admissionprocess.aspx.cs" />
+    <Content Include="pages\AdmissionReports.aspx" />
+    <Content Include="pages\AdmissionReports.aspx.cs" />
+    <Content Include="pages\AdmissionTestRescheduling.aspx" />
+    <Content Include="pages\AdmissionTestRescheduling.aspx.cs" />
+    <Content Include="pages\AdmissionTestScheduling.aspx" />
+    <Content Include="pages\AdmissionTestScheduling.aspx.cs" />
+    <Content Include="pages\AdvisingDetails.aspx" />
+    <Content Include="pages\AdvisingDetails.aspx.cs" />
+    <Content Include="pages\Advising_Details.aspx" />
+    <Content Include="pages\Advising_Details.aspx.cs" />
+    <Content Include="pages\Advising_Shiftees.aspx" />
+    <Content Include="pages\Advising_Shiftees.aspx.cs" />
+    <Content Include="pages\Advising_Transferees.aspx" />
+    <Content Include="pages\Advising_Transferees.aspx.cs" />
+    <Content Include="pages\ALCourseList.aspx" />
+    <Content Include="pages\ALCourseList.aspx.cs" />
+    <Content Include="pages\AllotmentMaster.cs" />
+    <Content Include="pages\AnswerSheet.cs" />
+    <Content Include="pages\AnswerSheetController.cs" />
+    <Content Include="pages\AppAlertConfig.cs" />
+    <Content Include="pages\AppAlertConfigController.cs" />
+    <Content Include="pages\Applicant_Preview.aspx" />
+    <Content Include="pages\Applicant_Preview.aspx.cs" />
+    <Content Include="pages\ApplicationFeesConfig.aspx" />
+    <Content Include="pages\ApplicationFeesConfig.aspx.cs" />
+    <Content Include="pages\applicationReceivedController.cs" />
+    <Content Include="pages\ApproveScholarship.aspx" />
+    <Content Include="pages\ApproveScholarship.aspx.cs" />
+    <Content Include="pages\Aptitute_Test_Mark_Entry.aspx" />
+    <Content Include="pages\Aptitute_Test_Mark_Entry.aspx.cs" />
+    <Content Include="pages\Aptitute_vise_students.aspx" />
+    <Content Include="pages\Aptitute_vise_students.aspx.cs" />
+    <Content Include="pages\assignFacultyAdvisor.aspx" />
+    <Content Include="pages\assignFacultyAdvisor.aspx.cs" />
+    <Content Include="pages\Attendance.cs" />
+    <Content Include="pages\Award_Configuration.aspx" />
+    <Content Include="pages\Award_Configuration.aspx.cs" />
+    <Content Include="pages\BackBulkRegistration.aspx" />
+    <Content Include="pages\BackBulkRegistration.aspx.cs" />
+    <Content Include="pages\BackCourseRegistrationByAdmin.aspx" />
+    <Content Include="pages\BackCourseRegistrationByAdmin.aspx.cs" />
+    <Content Include="pages\Backdateattlock.aspx" />
+    <Content Include="pages\Backdateattlock.aspx.cs" />
+    <Content Include="pages\Banktype.aspx" />
+    <Content Include="pages\Banktype.aspx.cs" />
+    <Content Include="pages\Bank_Details.aspx" />
+    <Content Include="pages\Bank_Details.aspx.cs" />
+    <Content Include="pages\Batch.cs" />
+    <Content Include="pages\BatchAllotment.aspx" />
+    <Content Include="pages\BatchAllotment.aspx.cs" />
+    <Content Include="pages\BatchController.cs" />
+    <Content Include="pages\Block_Student_Registration.aspx" />
+    <Content Include="pages\Block_Student_Registration.aspx.cs" />
+    <Content Include="pages\Branch.cs" />
+    <Content Include="pages\BranchChange.aspx" />
+    <Content Include="pages\BranchChange.aspx.cs" />
+    <Content Include="pages\BranchChangeAppered.aspx" />
+    <Content Include="pages\BranchChangeAppered.aspx.cs" />
+    <Content Include="pages\BranchController.cs" />
+    <Content Include="pages\BranchMapping.aspx" />
+    <Content Include="pages\BranchMapping.aspx.cs" />
+    <Content Include="pages\Branch_Change.aspx" />
+    <Content Include="pages\Branch_Change.aspx.cs" />
+    <Content Include="pages\Bridging_Group.aspx" />
+    <Content Include="pages\Bridging_Group.aspx.cs" />
+    <Content Include="pages\BulkPaymentTypeUpdate.aspx" />
+    <Content Include="pages\BulkPaymentTypeUpdate.aspx.cs" />
+    <Content Include="pages\BulkReconcilation.aspx" />
+    <Content Include="pages\BulkReconcilation.aspx.cs" />
+    <Content Include="pages\BulkRegistration.aspx" />
+    <Content Include="pages\BulkRegistration.aspx.cs" />
+    <Content Include="pages\BulkRegistrationSecondSem.aspx" />
+    <Content Include="pages\BulkRegistrationSecondSem.aspx.cs" />
+    <Content Include="pages\BulkSemesterPromotion.aspx" />
+    <Content Include="pages\BulkSemesterPromotion.aspx.cs" />
+    <Content Include="pages\CampusWiseIntake.aspx" />
+    <Content Include="pages\CampusWiseIntake.aspx.cs" />
+    <Content Include="pages\CanClgDeg.aspx" />
+    <Content Include="pages\CanClgDeg.aspx.cs" />
+    <Content Include="pages\CertificateApply.aspx" />
+    <Content Include="pages\CertificateApply.aspx.cs" />
+    <Content Include="pages\CertificateApproveRequest.aspx" />
+    <Content Include="pages\CertificateApproveRequest.aspx.cs" />
+    <Content Include="pages\CertificateMaster.aspx" />
+    <Content Include="pages\CertificateMaster.aspx.cs" />
+    <Content Include="pages\CertificateMaster.cs" />
+    <Content Include="pages\CertificateMasterController.cs" />
+    <Content Include="pages\Changeble_Reval.aspx" />
+    <Content Include="pages\Changeble_Reval.aspx.cs" />
+    <Content Include="pages\ChangeCoreSubject.aspx" />
+    <Content Include="pages\ChangeCoreSubject.aspx.cs" />
+    <Content Include="pages\ChangeElectiveCourse.aspx" />
+    <Content Include="pages\ChangeElectiveCourse.aspx.cs" />
+    <Content Include="pages\changeStudSem.aspx" />
+    <Content Include="pages\changeStudSem.aspx.cs" />
+    <Content Include="pages\Change_Section.aspx" />
+    <Content Include="pages\Change_Section.aspx.cs" />
+    <Content Include="pages\Check_List.aspx" />
+    <Content Include="pages\Check_List.aspx.cs" />
+    <Content Include="pages\College.cs" />
+    <Content Include="pages\CollegeController.cs" />
+    <Content Include="pages\CollegeSchemeConfig.aspx" />
+    <Content Include="pages\CollegeSchemeConfig.aspx.cs" />
+    <Content Include="pages\CollegeWise_RollList.aspx" />
+    <Content Include="pages\CollegeWise_RollList.aspx.cs" />
+    <Content Include="pages\CommunicationTrController.cs" />
+    <Content Include="pages\CommunicationTrEntity.cs" />
+    <Content Include="pages\Communication_Trigger.aspx" />
+    <Content Include="pages\Communication_Trigger.aspx.cs" />
+    <Content Include="pages\Comprehensive_Stud_Report.aspx" />
+    <Content Include="pages\Comprehensive_Stud_Report.aspx.cs" />
+    <Content Include="pages\Config.cs" />
+    <Content Include="pages\ConfigController.cs" />
+    <Content Include="pages\ConfirmationStatus.aspx" />
+    <Content Include="pages\ConfirmationStatus.aspx.cs" />
+    <Content Include="pages\ConvocationCertIssue.aspx" />
+    <Content Include="pages\ConvocationCertIssue.aspx.cs" />
+    <Content Include="pages\Course.cs" />
+    <Content Include="pages\courseAllot.aspx" />
+    <Content Include="pages\courseAllot.aspx.cs" />
+    <Content Include="pages\CourseController.cs" />
+    <Content Include="pages\CourseCreation.aspx" />
+    <Content Include="pages\CourseCreation.aspx.cs" />
+    <Content Include="pages\courseLink.aspx" />
+    <Content Include="pages\courseLink.aspx.cs" />
+    <Content Include="pages\CourseLink.cs" />
+    <Content Include="pages\CourseLinkController.cs" />
+    <Content Include="pages\coursemaster.aspx" />
+    <Content Include="pages\coursemaster.aspx.cs" />
+    <Content Include="pages\CourseOffered.aspx" />
+    <Content Include="pages\CourseOffered.aspx.cs" />
+    <Content Include="pages\CourseRegistration.aspx" />
+    <Content Include="pages\CourseRegistration.aspx.cs" />
+    <Content Include="pages\CourseRegistrationByAdmin.aspx" />
+    <Content Include="pages\CourseRegistrationByAdmin.aspx.cs" />
+    <Content Include="pages\CourseRegistrationForPhd.aspx" />
+    <Content Include="pages\CourseRegistrationForPhd.aspx.cs" />
+    <Content Include="pages\CourseRegistrationForUG.aspx" />
+    <Content Include="pages\CourseRegistrationForUG.aspx.cs" />
+    <Content Include="pages\CourseRegistrationModify.aspx" />
+    <Content Include="pages\CourseRegistrationModify.aspx.cs" />
+    <Content Include="pages\CourseRegistration_SingleStudent.aspx" />
+    <Content Include="pages\CourseRegistration_SingleStudent.aspx.cs" />
+    <Content Include="pages\CourseTeacherAllotController.cs" />
+    <Content Include="pages\CoursewiseLevel.aspx" />
+    <Content Include="pages\CoursewiseLevel.aspx.cs" />
+    <Content Include="pages\CourseWiseSeatNoReport.aspx" />
+    <Content Include="pages\CourseWiseSeatNoReport.aspx.cs" />
+    <Content Include="pages\CourseWiseSectionAllotment.aspx" />
+    <Content Include="pages\CourseWiseSectionAllotment.aspx.cs" />
+    <Content Include="pages\CoursewiseStudentCountReport.aspx" />
+    <Content Include="pages\CoursewiseStudentCountReport.aspx.cs" />
+    <Content Include="pages\Coursewise_Consolidate_Report.aspx" />
+    <Content Include="pages\Coursewise_Consolidate_Report.aspx.cs" />
+    <Content Include="pages\CourseWise_Registration.aspx" />
+    <Content Include="pages\CourseWise_Registration.aspx.cs" />
+    <Content Include="pages\CourseWorkDetails.aspx" />
+    <Content Include="pages\CourseWorkDetails.aspx.cs" />
+    <Content Include="pages\Course_Equivalance.aspx" />
+    <Content Include="pages\Course_Equivalance.aspx.cs" />
+    <Content Include="pages\Course_Mapping.aspx" />
+    <Content Include="pages\Course_Mapping.aspx.cs" />
+    <Content Include="pages\Create_Criteria.aspx" />
+    <Content Include="pages\Create_Criteria.aspx.cs" />
+    <Content Include="pages\DailyTimeTable.aspx" />
+    <Content Include="pages\DailyTimeTable.aspx.cs" />
+    <Content Include="pages\Data_Correction_Facility.aspx" />
+    <Content Include="pages\Data_Correction_Facility.aspx.cs" />
+    <Content Include="pages\DateTo_Remember.aspx" />
+    <Content Include="pages\DateTo_Remember.aspx.cs" />
+    <Content Include="pages\DCR_ReportUI.aspx" />
+    <Content Include="pages\DCR_ReportUI.aspx.cs" />
+    <Content Include="pages\DefineCounter.aspx" />
+    <Content Include="pages\DefineCounter.aspx.cs" />
+    <Content Include="pages\DefineCreditLimit.cs" />
+    <Content Include="pages\DefineTotalCredit.aspx" />
+    <Content Include="pages\DefineTotalCredit.aspx.cs" />
+    <Content Include="pages\DefineTotalCreditController.cs" />
+    <Content Include="pages\DegreeComplition.cs" />
+    <Content Include="pages\DegreeMapping.aspx" />
+    <Content Include="pages\DegreeMapping.aspx.cs" />
+    <Content Include="pages\Delete_User.aspx" />
+    <Content Include="pages\Delete_User.aspx.cs" />
+    <Content Include="pages\DemandCancelController.cs" />
+    <Content Include="pages\demandCreation.aspx" />
+    <Content Include="pages\demandCreation.aspx.cs" />
+    <Content Include="pages\demandModify.aspx" />
+    <Content Include="pages\demandModify.aspx.cs" />
+    <Content Include="pages\Department.cs" />
+    <Content Include="pages\DepartmentMapping.aspx" />
+    <Content Include="pages\DepartmentMapping.aspx.cs" />
+    <Content Include="pages\DocumentAcad.cs" />
+    <Content Include="pages\DocumentController.cs" />
+    <Content Include="pages\DocumentControllerAcad.cs" />
+    <Content Include="pages\DocumentMapping.aspx" />
+    <Content Include="pages\DocumentMapping.aspx.cs" />
+    <Content Include="pages\Electiveregistration.aspx" />
+    <Content Include="pages\Electiveregistration.aspx.cs" />
+    <Content Include="pages\Enlistment_Approval.aspx" />
+    <Content Include="pages\Enlistment_Approval.aspx.cs" />
+    <Content Include="pages\EnrollCount.aspx" />
+    <Content Include="pages\EnrollCount.aspx.cs" />
+    <Content Include="pages\EnrollmentReports.aspx" />
+    <Content Include="pages\EnrollmentReports.aspx.cs" />
+    <Content Include="pages\Enrollment_Configuration.aspx" />
+    <Content Include="pages\Enrollment_Configuration.aspx.cs" />
+    <Content Include="pages\Enrollment_Confirmation.aspx" />
+    <Content Include="pages\Enrollment_Confirmation.aspx.cs" />
+    <Content Include="pages\EntityClass.cs" />
+    <Content Include="pages\EntityMethodClass.cs" />
+    <Content Include="pages\EntranceMapping.aspx" />
+    <Content Include="pages\EntranceMapping.aspx.cs" />
+    <Content Include="pages\Equivalence.aspx" />
+    <Content Include="pages\Equivalence.aspx.cs" />
+    <Content Include="pages\error.aspx" />
+    <Content Include="pages\error.aspx.cs" />
+    <Content Include="pages\examconfig.aspx" />
+    <Content Include="pages\examconfig.aspx.cs" />
+    <Content Include="pages\ExamRegistrationSlip.aspx" />
+    <Content Include="pages\ExamRegistrationSlip.aspx.cs" />
+    <Content Include="pages\ExamScheduling.cs" />
+    <Content Include="pages\ExportsUtility.aspx" />
+    <Content Include="pages\ExportsUtility.aspx.cs" />
+    <Content Include="pages\Extension_Activities.aspx" />
+    <Content Include="pages\Extension_Activities.aspx.cs" />
+    <Content Include="pages\ExtraCharge.aspx" />
+    <Content Include="pages\ExtraCharge.aspx.cs" />
+    <Content Include="pages\FacultyTimetable.aspx" />
+    <Content Include="pages\FacultyTimetable.aspx.cs" />
+    <Content Include="pages\FeeCollection.aspx" />
+    <Content Include="pages\FeeCollection.aspx.cs" />
+    <Content Include="pages\FeeReceiptLedgerReport.aspx" />
+    <Content Include="pages\FeeReceiptLedgerReport.aspx.cs" />
+    <Content Include="pages\FeesDetails.aspx" />
+    <Content Include="pages\FeesDetails.aspx.cs" />
+    <Content Include="pages\FeesDrillDownReport.aspx" />
+    <Content Include="pages\FeesDrillDownReport.aspx.cs" />
+    <Content Include="pages\Feespayment.aspx" />
+    <Content Include="pages\Feespayment.aspx.cs" />
+    <Content Include="pages\FeesPay_Response.aspx" />
+    <Content Include="pages\FeesPay_Response.aspx.cs" />
+    <Content Include="pages\FetchDataController.cs" />
+    <Content Include="pages\FinalDetaintion.aspx" />
+    <Content Include="pages\FinalDetaintion.aspx.cs" />
+    <Content Include="pages\Followupdate.aspx" />
+    <Content Include="pages\Followupdate.aspx.cs" />
+    <Content Include="pages\GameReport.aspx" />
+    <Content Include="pages\GameReport.aspx.cs" />
+    <Content Include="pages\GenerateOfferLetter.aspx" />
+    <Content Include="pages\GenerateOfferLetter.aspx.cs" />
+    <Content Include="pages\Generate_RollNo.aspx" />
+    <Content Include="pages\Generate_RollNo.aspx.cs" />
+    <Content Include="pages\Grade.cs" />
+    <Content Include="pages\GradeController.cs" />
+    <Content Include="pages\GradeEntry.cs" />
+    <Content Include="pages\GradeEntryController.cs" />
+    <Content Include="pages\GradeGeneration.aspx" />
+    <Content Include="pages\GradeGeneration.aspx.cs" />
+    <Content Include="pages\GradeScheme.aspx" />
+    <Content Include="pages\GradeScheme.aspx.cs" />
+    <Content Include="pages\Grouping_Automation_Criteria.aspx" />
+    <Content Include="pages\Grouping_Automation_Criteria.aspx.cs" />
+    <Content Include="pages\Group_Creation.aspx" />
+    <Content Include="pages\Group_Creation.aspx.cs" />
+    <Content Include="pages\HigherStudies.aspx" />
+    <Content Include="pages\HigherStudies.aspx.cs" />
+    <Content Include="pages\HolidayMaster.aspx" />
+    <Content Include="pages\HolidayMaster.aspx.cs" />
+    <Content Include="pages\Installment.cs" />
+    <Content Include="pages\InstallmentController.cs" />
+    <Content Include="pages\InstalmentAmount.aspx" />
+    <Content Include="pages\InstalmentAmount.aspx.cs" />
+    <Content Include="pages\Intake.aspx" />
+    <Content Include="pages\Intake.aspx.cs" />
+    <Content Include="pages\IntakeLeadMapping.cs" />
+    <Content Include="pages\IntakeLeadMappingController.cs" />
+    <Content Include="pages\IntakeMapping.aspx" />
+    <Content Include="pages\IntakeMapping.aspx.cs" />
+    <Content Include="pages\Intake_Lead_Mapping.aspx" />
+    <Content Include="pages\Intake_Lead_Mapping.aspx.cs" />
+    <Content Include="pages\Intake_Transfer.aspx" />
+    <Content Include="pages\Intake_Transfer.aspx.cs" />
+    <Content Include="pages\InternshipApproval.aspx" />
+    <Content Include="pages\InternshipApproval.aspx.cs" />
+    <Content Include="pages\Interview.aspx" />
+    <Content Include="pages\Interview.aspx.cs" />
+    <Content Include="pages\InvigilationDutyEntry.aspx" />
+    <Content Include="pages\InvigilationDutyEntry.aspx.cs" />
+    <Content Include="pages\InvigilatorEntry.aspx" />
+    <Content Include="pages\InvigilatorEntry.aspx.cs" />
+    <Content Include="pages\LateFeeReport.aspx" />
+    <Content Include="pages\LateFeeReport.aspx.cs" />
+    <Content Include="pages\LeadAllotment.aspx" />
+    <Content Include="pages\LeadAllotment.aspx.cs" />
+    <Content Include="pages\LeadGroupCreation.aspx" />
+    <Content Include="pages\LeadGroupCreation.aspx.cs" />
+    <Content Include="pages\LeavingCertificate.cs" />
+    <Content Include="pages\LeavingCertificateController.cs" />
+    <Content Include="pages\LMController.cs" />
+    <Content Include="pages\LoanApply.aspx" />
+    <Content Include="pages\LoanApply.aspx.cs" />
+    <Content Include="pages\Loan_Workflow.aspx" />
+    <Content Include="pages\Loan_Workflow.aspx.cs" />
+    <Content Include="pages\LockFeeCollections.aspx" />
+    <Content Include="pages\LockFeeCollections.aspx.cs" />
+    <Content Include="pages\Lockunlockstudentwise.aspx" />
+    <Content Include="pages\Lockunlockstudentwise.aspx.cs" />
+    <Content Include="pages\MarkEntry.cs" />
+    <Content Include="pages\MarksEntryController.cs" />
+    <Content Include="pages\MarksheetInventoryRptController.cs" />
+    <Content Include="pages\MasterCard_Payment.aspx" />
+    <Content Include="pages\MasterCard_Payment.aspx.cs" />
+    <Content Include="pages\MigrationReport.aspx" />
+    <Content Include="pages\MigrationReport.aspx.cs" />
+    <Content Include="pages\MISC_Fine_Master.aspx" />
+    <Content Include="pages\MISC_Fine_Master.aspx.cs" />
+    <Content Include="pages\ModifiedLead.aspx" />
+    <Content Include="pages\ModifiedLead.aspx.cs" />
+    <Content Include="pages\ModifyStudType.aspx" />
+    <Content Include="pages\ModifyStudType.aspx.cs" />
+    <Content Include="pages\ModuleOutline_Controller.cs" />
+    <Content Include="pages\ModuleRuleBook.cs" />
+    <Content Include="pages\Module_Outline.aspx" />
+    <Content Include="pages\Module_Outline.aspx.cs" />
+    <Content Include="pages\Module_Revision.aspx" />
+    <Content Include="pages\Module_Revision.aspx.cs" />
+    <Content Include="pages\Multi_currency.aspx" />
+    <Content Include="pages\Multi_currency.aspx.cs" />
+    <Content Include="pages\My_Wallet.aspx" />
+    <Content Include="pages\My_Wallet.aspx.cs" />
+    <Content Include="pages\Navision_Status.aspx" />
+    <Content Include="pages\Navision_Status.aspx.cs" />
+    <Content Include="pages\NCCActivity.cs" />
+    <Content Include="pages\NCCActivityController.cs" />
+    <Content Include="pages\NewAdmBranchChange.aspx" />
+    <Content Include="pages\NewAdmBranchChange.aspx.cs" />
+    <Content Include="pages\NewStudent.aspx" />
+    <Content Include="pages\NewStudent.aspx.cs" />
+    <Content Include="pages\NewStudentApproval.aspx" />
+    <Content Include="pages\NewStudentApproval.aspx.cs" />
+    <Content Include="pages\New_Enrollment_Confirmation.aspx" />
+    <Content Include="pages\New_Enrollment_Confirmation.aspx.cs" />
+    <Content Include="pages\New_Student.cs" />
+    <Content Include="pages\New_Student_RegController.cs" />
+    <Content Include="pages\NoDuesProforma.aspx" />
+    <Content Include="pages\NoDuesProforma.aspx.cs" />
+    <Content Include="pages\Notification.cs" />
+    <Content Include="pages\NotificationAndroid.cs" />
+    <Content Include="pages\NotificationController.cs" />
+    <Content Include="pages\OfferedCourse.aspx" />
+    <Content Include="pages\OfferedCourse.aspx.cs" />
+    <Content Include="pages\OfferedCourse_Session_Wise.aspx" />
+    <Content Include="pages\OfferedCourse_Session_Wise.aspx.cs" />
+    <Content Include="pages\OLCourseList.aspx" />
+    <Content Include="pages\OLCourseList.aspx.cs" />
+    <Content Include="pages\OnlineAdmissionReportPortal.aspx" />
+    <Content Include="pages\OnlineAdmissionReportPortal.aspx.cs" />
+    <Content Include="pages\OnlinePaymentAdminLogin.aspx" />
+    <Content Include="pages\OnlinePaymentAdminLogin.aspx.cs" />
+    <Content Include="pages\OnlinePaymentReconcilation.aspx" />
+    <Content Include="pages\OnlinePaymentReconcilation.aspx.cs" />
+    <Content Include="pages\OnlinepaymentStudentLogin.aspx" />
+    <Content Include="pages\OnlinepaymentStudentLogin.aspx.cs" />
+    <Content Include="pages\Online_Payment_transaction.aspx" />
+    <Content Include="pages\Online_Payment_transaction.aspx.cs" />
+    <Content Include="pages\Online_QueryManagement.aspx" />
+    <Content Include="pages\Online_QueryManagement.aspx.cs" />
+    <Content Include="pages\OtherInformation.aspx" />
+    <Content Include="pages\OtherInformation.aspx.cs" />
+    <Content Include="pages\Other_Currency_Payment.aspx" />
+    <Content Include="pages\Other_Currency_Payment.aspx.cs" />
+    <Content Include="pages\OutstandingFeesReport.aspx" />
+    <Content Include="pages\OutstandingFeesReport.aspx.cs" />
+    <Content Include="pages\PaymentReconcilation.aspx" />
+    <Content Include="pages\PaymentReconcilation.aspx.cs" />
+    <Content Include="pages\Payment_Reconciliation.aspx" />
+    <Content Include="pages\Payment_Reconciliation.aspx.cs" />
+    <Content Include="pages\PBIConfigurationController.cs" />
+    <Content Include="pages\PBIConfigurationEntity.cs" />
+    <Content Include="pages\PendingPayment.aspx" />
+    <Content Include="pages\PendingPayment.aspx.cs" />
+    <Content Include="pages\PersonalDetails.aspx" />
+    <Content Include="pages\PersonalDetails.aspx.cs" />
+    <Content Include="pages\PhdController.cs" />
+    <Content Include="pages\PhdEntranceExamDetails.aspx" />
+    <Content Include="pages\PhdEntranceExamDetails.aspx.cs" />
+    <Content Include="pages\PhdPostAdmission.cs" />
+    <Content Include="pages\PhotoReval_Response.aspx" />
+    <Content Include="pages\PhotoReval_Response.aspx.cs" />
+    <Content Include="pages\PostChequeEntry.aspx" />
+    <Content Include="pages\PostChequeEntry.aspx.cs" />
+    <Content Include="pages\Postponement.aspx" />
+    <Content Include="pages\Postponement.aspx.cs" />
+    <Content Include="pages\PrintApplication.aspx" />
+    <Content Include="pages\PrintApplication.aspx.cs" />
+    <Content Include="pages\PrintForNotesheet.aspx" />
+    <Content Include="pages\PrintForNotesheet.aspx.cs" />
+    <Content Include="pages\PrintMultipleMigrationCard.aspx" />
+    <Content Include="pages\PrintMultipleMigrationCard.aspx.cs" />
+    <Content Include="pages\PrintRegistrationCard.aspx" />
+    <Content Include="pages\PrintRegistrationCard.aspx.cs" />
+    <Content Include="pages\ProgramRuleCreation.aspx" />
+    <Content Include="pages\ProgramRuleCreation.aspx.cs" />
+    <Content Include="pages\Program_BasedResult.aspx" />
+    <Content Include="pages\Program_BasedResult.aspx.cs" />
+    <Content Include="pages\Program_Transfer.aspx" />
+    <Content Include="pages\Program_Transfer.aspx.cs" />
+    <Content Include="pages\Projects.cs" />
+    <Content Include="pages\ProjectsController.cs" />
+    <Content Include="pages\Promissory_Note_Approval.aspx" />
+    <Content Include="pages\Promissory_Note_Approval.aspx.cs" />
+    <Content Include="pages\ProspectusCancellation.aspx" />
+    <Content Include="pages\ProspectusCancellation.aspx.cs" />
+    <Content Include="pages\ProspectusSale_Report.aspx" />
+    <Content Include="pages\ProspectusSale_Report.aspx.cs" />
+    <Content Include="pages\ProvisionalAdmissionConform.aspx" />
+    <Content Include="pages\ProvisionalAdmissionConform.aspx.cs" />
+    <Content Include="pages\PStaff.cs" />
+    <Content Include="pages\PStaffController.cs" />
+    <Content Include="pages\QrCodeController.cs" />
+    <Content Include="pages\QualificationDetails.aspx" />
+    <Content Include="pages\QualificationDetails.aspx.cs" />
+    <Content Include="pages\QualifiedExam.cs" />
+    <Content Include="pages\QualifyController.cs" />
+    <Content Include="pages\Refund_Policy.aspx" />
+    <Content Include="pages\Refund_Policy.aspx.cs" />
+    <Content Include="pages\Refund_Policy_Allocation.aspx" />
+    <Content Include="pages\Refund_Policy_Allocation.aspx.cs" />
+    <Content Include="pages\RegisterStudentforNCC.aspx" />
+    <Content Include="pages\RegisterStudentforNCC.aspx.cs" />
+    <Content Include="pages\RegistraionNoGeneration.aspx" />
+    <Content Include="pages\RegistraionNoGeneration.aspx.cs" />
+    <Content Include="pages\RegistrationReport.aspx" />
+    <Content Include="pages\RegistrationReport.aspx.cs" />
+    <Content Include="pages\Remaining_Fees_Collection.aspx" />
+    <Content Include="pages\Remaining_Fees_Collection.aspx.cs" />
+    <Content Include="pages\ReportTypeController.cs" />
+    <Content Include="pages\ReportTypeEntity.cs" />
+    <Content Include="pages\ReportTypeProcedure.aspx" />
+    <Content Include="pages\ReportTypeProcedure.aspx.cs" />
+    <Content Include="pages\ReprintReceipts.aspx" />
+    <Content Include="pages\ReprintReceipts.aspx.cs" />
+    <Content Include="pages\ReservationConfiguration.aspx" />
+    <Content Include="pages\ReservationConfiguration.aspx.cs" />
+    <Content Include="pages\ResetEnlistment.aspx" />
+    <Content Include="pages\ResetEnlistment.aspx.cs" />
+    <Content Include="pages\ResponseStatus.aspx" />
+    <Content Include="pages\ResponseStatus.aspx.cs" />
+    <Content Include="pages\ReStudyApproval.aspx" />
+    <Content Include="pages\ReStudyApproval.aspx.cs" />
+    <Content Include="pages\RevalChalanReconcilation.aspx" />
+    <Content Include="pages\RevalChalanReconcilation.aspx.cs" />
+    <Content Include="pages\RevaluationRegistration.aspx" />
+    <Content Include="pages\RevaluationRegistration.aspx.cs" />
+    <Content Include="pages\RevaluationRegistrationByStudent.aspx" />
+    <Content Include="pages\RevaluationRegistrationByStudent.aspx.cs" />
+    <Content Include="pages\ReviewApproveRefund.aspx" />
+    <Content Include="pages\ReviewApproveRefund.aspx.cs" />
+    <Content Include="pages\ReviewRegistration.aspx" />
+    <Content Include="pages\ReviewRegistration.aspx.cs" />
+    <Content Include="pages\Re_Admission.aspx" />
+    <Content Include="pages\Re_Admission.aspx.cs" />
+    <Content Include="pages\RoomConfig.cs" />
+    <Content Include="pages\RuleEngineDefiniton.aspx" />
+    <Content Include="pages\RuleEngineDefiniton.aspx.cs" />
+    <Content Include="pages\Scheme.cs" />
+    <Content Include="pages\SchemeAllotment.aspx" />
+    <Content Include="pages\SchemeAllotment.aspx.cs" />
+    <Content Include="pages\SchemeController.cs" />
+    <Content Include="pages\schememaster.aspx" />
+    <Content Include="pages\schememaster.aspx.cs" />
+    <Content Include="pages\Scholarship.cs" />
+    <Content Include="pages\ScholarshipApproval.aspx" />
+    <Content Include="pages\ScholarshipApproval.aspx.cs" />
+    <Content Include="pages\ScholarshipReports.aspx" />
+    <Content Include="pages\ScholarshipReports.aspx.cs" />
+    <Content Include="pages\Scholarship_And_Payment.aspx" />
+    <Content Include="pages\Scholarship_And_Payment.aspx.cs" />
+    <Content Include="pages\Scholarship_Application.aspx" />
+    <Content Include="pages\Scholarship_Application.aspx.cs" />
+    <Content Include="pages\Scholarship_Apply.aspx" />
+    <Content Include="pages\Scholarship_Apply.aspx.cs" />
+    <Content Include="pages\Scholarship_Update.aspx" />
+    <Content Include="pages\Scholarship_Update.aspx.cs" />
+    <Content Include="pages\Screening_Configuration.aspx" />
+    <Content Include="pages\Screening_Configuration.aspx.cs" />
+    <Content Include="pages\ScrunityRegistrationthroughPayment.aspx" />
+    <Content Include="pages\ScrunityRegistrationthroughPayment.aspx.cs" />
+    <Content Include="pages\ScrutinyRegistration.aspx" />
+    <Content Include="pages\ScrutinyRegistration.aspx.cs" />
+    <Content Include="pages\SearchStudent.aspx" />
+    <Content Include="pages\SearchStudent.aspx.cs" />
+    <Content Include="pages\SeatAllotment.aspx" />
+    <Content Include="pages\SeatAllotment.aspx.cs" />
+    <Content Include="pages\Seating.cs" />
+    <Content Include="pages\SeatingArrangement.aspx" />
+    <Content Include="pages\SeatingArrangement.aspx.cs" />
+    <Content Include="pages\SeatingArrangementDeallocation.aspx" />
+    <Content Include="pages\SeatingArrangementDeallocation.aspx.cs" />
+    <Content Include="pages\Seat_Branch_Allotment.aspx" />
+    <Content Include="pages\Seat_Branch_Allotment.aspx.cs" />
+    <Content Include="pages\SectionAllotment.aspx" />
+    <Content Include="pages\SectionAllotment.aspx.cs" />
+    <Content Include="pages\SectionAllotmentFor_Backlog.aspx" />
+    <Content Include="pages\SectionAllotmentFor_Backlog.aspx.cs" />
+    <Content Include="pages\SectionAllotmentManual.aspx" />
+    <Content Include="pages\SectionAllotmentManual.aspx.cs" />
+    <Content Include="pages\Section_Update.aspx" />
+    <Content Include="pages\Section_Update.aspx.cs" />
+    <Content Include="pages\SelectionProcess.aspx" />
+    <Content Include="pages\SelectionProcess.aspx.cs" />
+    <Content Include="pages\SemesterOffer.aspx" />
+    <Content Include="pages\SemesterOffer.aspx.cs" />
+    <Content Include="pages\SemesterWiseReport.aspx" />
+    <Content Include="pages\SemesterWiseReport.aspx.cs" />
+    <Content Include="pages\Semester_master.aspx" />
+    <Content Include="pages\Semester_master.aspx.cs" />
+    <Content Include="pages\Semester_Promotion.aspx" />
+    <Content Include="pages\Semester_Promotion.aspx.cs" />
+    <Content Include="pages\SendBulkEmailSms.aspx" />
+    <Content Include="pages\SendBulkEmailSms.aspx.cs" />
+    <Content Include="pages\SendThrough.cs" />
+    <Content Include="pages\SendThroughController.cs" />
+    <Content Include="pages\sendtoairpay.aspx" />
+    <Content Include="pages\sendtoairpay.aspx.cs" />
+    <Content Include="pages\sendtoairpayiframe.aspx" />
+    <Content Include="pages\sendtoairpayiframe.aspx.cs" />
+    <Content Include="pages\Session.cs" />
+    <Content Include="pages\SessionController.cs" />
+    <Content Include="pages\SessionMaster.aspx" />
+    <Content Include="pages\SessionMaster.aspx.cs" />
+    <Content Include="pages\SessionWiseOfferedCoure.aspx" />
+    <Content Include="pages\SessionWiseOfferedCoure.aspx.cs" />
+    <Content Include="pages\SignUp.aspx" />
+    <Content Include="pages\SignUp.aspx.cs" />
+    <Content Include="pages\SignUpExcel.aspx" />
+    <Content Include="pages\SignUpExcel.aspx.cs" />
+    <Content Include="pages\SlotController.cs" />
+    <Content Include="pages\SlotMaster.cs" />
+    <Content Include="pages\Slot_Approval.aspx" />
+    <Content Include="pages\Slot_Approval.aspx.cs" />
+    <Content Include="pages\Slot_Booking.aspx" />
+    <Content Include="pages\Slot_Booking.aspx.cs" />
+    <Content Include="pages\Slot_Booking_Creation.aspx" />
+    <Content Include="pages\Slot_Booking_Creation.aspx.cs" />
+    <Content Include="pages\Slot_Monitoring.aspx" />
+    <Content Include="pages\Slot_Monitoring.aspx.cs" />
+    <Content Include="pages\SMSLogReport.aspx" />
+    <Content Include="pages\SMSLogReport.aspx.cs" />
+    <Content Include="pages\SmsService.aspx" />
+    <Content Include="pages\SmsService.aspx.cs" />
+    <Content Include="pages\SpclRequestConfig.aspx" />
+    <Content Include="pages\SpclRequestConfig.aspx.cs" />
+    <Content Include="pages\SpecialClassApproveController.cs" />
+    <Content Include="pages\SpecialRequestConfigController.cs" />
+    <Content Include="pages\SpecialRequestConfiguration.cs" />
+    <Content Include="pages\Srcategory.aspx" />
+    <Content Include="pages\Srcategory.aspx.cs" />
+    <Content Include="pages\Student.cs" />
+    <Content Include="pages\StudentAddress.cs" />
+    <Content Include="pages\StudentAdmissionConform.aspx" />
+    <Content Include="pages\StudentAdmissionConform.aspx.cs" />
+    <Content Include="pages\StudentAllDeatils.aspx" />
+    <Content Include="pages\StudentAllDeatils.aspx.cs" />
+    <Content Include="pages\StudentApplicant_Preview.aspx" />
+    <Content Include="pages\StudentApplicant_Preview.aspx.cs" />
+    <Content Include="pages\StudentApprovalStatus.aspx" />
+    <Content Include="pages\StudentApprovalStatus.aspx.cs" />
+    <Content Include="pages\StudentAttendance.cs" />
+    <Content Include="pages\StudentAttendanceController.cs" />
+    <Content Include="pages\StudentCompleteStatusList.aspx" />
+    <Content Include="pages\StudentCompleteStatusList.aspx.cs" />
+    <Content Include="pages\StudentController.cs" />
+    <Content Include="pages\StudentDataEntry.aspx" />
+    <Content Include="pages\StudentDataEntry.aspx.cs" />
+    <Content Include="pages\StudentDetails.aspx" />
+    <Content Include="pages\StudentDetails.aspx.cs" />
+    <Content Include="pages\StudentDetend.cs" />
+    <Content Include="pages\StudentDetentionController.cs" />
+    <Content Include="pages\StudentDocumentList.aspx" />
+    <Content Include="pages\StudentDocumentList.aspx.cs" />
+    <Content Include="pages\StudentDocVerfication.aspx" />
+    <Content Include="pages\StudentDocVerfication.aspx.cs" />
+    <Content Include="pages\StudentFeedBack.cs" />
+    <Content Include="pages\StudentFeedBackAns.aspx" />
+    <Content Include="pages\StudentFeedBackAns.aspx.cs" />
+    <Content Include="pages\StudentFeedBackAnsUniversity.aspx" />
+    <Content Include="pages\StudentFeedBackAnsUniversity.aspx.cs" />
+    <Content Include="pages\StudentFeedBackController.cs" />
+    <Content Include="pages\StudentForRegistration.aspx" />
+    <Content Include="pages\StudentForRegistration.aspx.cs" />
+    <Content Include="pages\StudentIDCard.aspx" />
+    <Content Include="pages\StudentIDCard.aspx.cs" />
+    <Content Include="pages\StudentIDCardReport.aspx" />
+    <Content Include="pages\StudentIDCardReport.aspx.cs" />
+    <Content Include="pages\StudentInfo.aspx" />
+    <Content Include="pages\StudentInfo.aspx.cs" />
+    <Content Include="pages\StudentInfoEntry.aspx" />
+    <Content Include="pages\StudentInfoEntry.aspx.cs" />
+    <Content Include="pages\StudentInformation.aspx" />
+    <Content Include="pages\StudentInformation.aspx.cs" />
+    <Content Include="pages\StudentInformation.cs" />
+    <Content Include="pages\StudentLedgerReport.aspx" />
+    <Content Include="pages\StudentLedgerReport.aspx.cs" />
+    <Content Include="pages\StudentNCCDetails.aspx" />
+    <Content Include="pages\StudentNCCDetails.aspx.cs" />
+    <Content Include="pages\StudentNewEnquiry.aspx" />
+    <Content Include="pages\StudentNewEnquiry.aspx.cs" />
+    <Content Include="pages\StudentPhoto.cs" />
+    <Content Include="pages\StudentProfile.cs" />
+    <Content Include="pages\StudentProfileController.cs" />
+    <Content Include="pages\StudentProgression.cs" />
+    <Content Include="pages\StudentProgressionController.cs" />
+    <Content Include="pages\StudentQualExm.cs" />
+    <Content Include="pages\StudentRegist.cs" />
+    <Content Include="pages\StudentRegistration.aspx" />
+    <Content Include="pages\StudentRegistration.aspx.cs" />
+    <Content Include="pages\StudentRegistration.cs" />
+    <Content Include="pages\StudentRegistrationController.cs" />
+    <Content Include="pages\StudentRegistrationModel.cs" />
+    <Content Include="pages\StudentRegistrationShort.aspx" />
+    <Content Include="pages\StudentRegistrationShort.aspx.cs" />
+    <Content Include="pages\StudentReport.aspx" />
+    <Content Include="pages\StudentReport.aspx.cs" />
+    <Content Include="pages\StudentRequest.aspx" />
+    <Content Include="pages\StudentRequest.aspx.cs" />
+    <Content Include="pages\StudentRequestController.cs" />
+    <Content Include="pages\StudentResultDetails.aspx" />
+    <Content Include="pages\StudentResultDetails.aspx.cs" />
+    <Content Include="pages\StudentRollList.aspx" />
+    <Content Include="pages\StudentRollList.aspx.cs" />
+    <Content Include="pages\StudentSearch.cs" />
+    <Content Include="pages\StudentSelectFieldController.cs" />
+    <Content Include="pages\StudentShift.aspx" />
+    <Content Include="pages\StudentShift.aspx.cs" />
+    <Content Include="pages\StudentSportsDetails.aspx" />
+    <Content Include="pages\StudentSportsDetails.aspx.cs" />
+    <Content Include="pages\StudentStrengthReport.aspx" />
+    <Content Include="pages\StudentStrengthReport.aspx.cs" />
+    <Content Include="pages\StudentTempRegistration.aspx" />
+    <Content Include="pages\StudentTempRegistration.aspx.cs" />
+    <Content Include="pages\Student_Acd.cs" />
+    <Content Include="pages\Student_Achievement.aspx" />
+    <Content Include="pages\Student_Achievement.aspx.cs" />
+    <Content Include="pages\Student_details.aspx" />
+    <Content Include="pages\Student_details.aspx.cs" />
+    <Content Include="pages\Student_Details_Reports.aspx" />
+    <Content Include="pages\Student_Details_Reports.aspx.cs" />
+    <Content Include="pages\Student_Industrial_Details.aspx" />
+    <Content Include="pages\Student_Industrial_Details.aspx.cs" />
+    <Content Include="pages\Student_Information.aspx" />
+    <Content Include="pages\Student_Information.aspx.cs" />
+    <Content Include="pages\Student_Profile.aspx" />
+    <Content Include="pages\Student_Profile.aspx.cs" />
+    <Content Include="pages\Student_Progression.aspx" />
+    <Content Include="pages\Student_Progression.aspx.cs" />
+    <Content Include="pages\Student_Prospectus.aspx" />
+    <Content Include="pages\Student_Prospectus.aspx.cs" />
+    <Content Include="pages\SubjectIntakeDefination.aspx" />
+    <Content Include="pages\SubjectIntakeDefination.aspx.cs" />
+    <Content Include="pages\TabController.cs" />
+    <Content Include="pages\TabEntity.cs" />
+    <Content Include="pages\TabMaster.aspx" />
+    <Content Include="pages\TabMaster.aspx.cs" />
+    <Content Include="pages\teacherallotment.aspx" />
+    <Content Include="pages\teacherallotment.aspx.cs" />
+    <Content Include="pages\TeacherNotAllot.aspx" />
+    <Content Include="pages\TeacherNotAllot.aspx.cs" />
+    <Content Include="pages\TeachingPlanController.cs" />
+    <Content Include="pages\transaction.aspx" />
+    <Content Include="pages\transaction.aspx.cs" />
+    <Content Include="pages\TransfereeConfirmation.aspx" />
+    <Content Include="pages\TransfereeConfirmation.aspx.cs" />
+    <Content Include="pages\Transfer_Module_Mapping.aspx" />
+    <Content Include="pages\Transfer_Module_Mapping.aspx.cs" />
+    <Content Include="pages\TransfreePreview.aspx" />
+    <Content Include="pages\TransfreePreview.aspx.cs" />
+    <Content Include="pages\TransfreePreviewVin.aspx" />
+    <Content Include="pages\TransfreePreviewVin.aspx.cs" />
+    <Content Include="pages\UaimsConfiguration.aspx" />
+    <Content Include="pages\UaimsConfiguration.aspx.cs" />
+    <Content Include="pages\University_BasedResult.aspx" />
+    <Content Include="pages\University_BasedResult.aspx.cs" />
+    <Content Include="pages\UploadDocument.aspx" />
+    <Content Include="pages\UploadDocument.aspx.cs" />
+    <Content Include="pages\UploadVIPData.aspx" />
+    <Content Include="pages\UploadVIPData.aspx.cs" />
+    <Content Include="pages\UserInfoVerify.aspx" />
+    <Content Include="pages\UserInfoVerify.aspx.cs" />
+    <Content Include="pages\UserPaymentReconcilation.aspx" />
+    <Content Include="pages\UserPaymentReconcilation.aspx.cs" />
+    <Content Include="pages\WalletController.cs" />
+    <Content Include="pages\WGPA_Configuration.aspx" />
+    <Content Include="pages\WGPA_Configuration.aspx.cs" />
+    <Content Include="pages\Withdrawal_Admission.aspx" />
+    <Content Include="pages\Withdrawal_Admission.aspx.cs" />
+    <Content Include="pages\Withdrawal_Applicationaspx.aspx" />
+    <Content Include="pages\Withdrawal_Applicationaspx.aspx.cs" />
+    <Content Include="pages\Withdrawal_Approval.aspx" />
+    <Content Include="pages\Withdrawal_Approval.aspx.cs" />
+    <Content Include="pages\Withdrawal_Approval_By_Finance.aspx" />
+    <Content Include="pages\Withdrawal_Approval_By_Finance.aspx.cs" />
+    <Content Include="pages\Withdrawal_Aproval.aspx" />
+    <Content Include="pages\Withdrawal_Aproval.aspx.cs" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.vb" />
+    <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="About.aspx.designer.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="About.aspx.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.vb">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.vb">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Site.Master.designer.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.vb">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.vb">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.vb">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.vb">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Site.Master" />
+    <Content Include="Site.Mobile.Master" />
+    <Content Include="ViewSwitcher.ascx" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Scripts\controller\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52881</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44352/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
